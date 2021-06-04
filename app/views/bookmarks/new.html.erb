@@ -1,0 +1,16 @@
+<div class="container col-6 p-3">
+  <div class="card p-3 justify-elements-center">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
+
+<h3 class="text-center"> Has agregado <%= @list.movies.length %> peliculas </h3>
+<% console %>
+
+<div class="btn btn-info">
+  <%= link_to 'Go to index', lists_path %>
+</div>

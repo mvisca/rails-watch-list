@@ -3,6 +3,7 @@
     <h1>Your lists</h1>
   </div>
 
+<%= link_to 'Create list', new_list_path  %>
   <div class="container p-3">
     <% @lists.each do | list | %>
       <div class="card d-flex inline-block m-3 p-3">
