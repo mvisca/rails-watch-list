@@ -15,8 +15,8 @@ puts 'Create new movies'
 
 List.destroy_all
 puts 'Destroy all lists'
-l1 = List.create(name: "Action")
-l2 = List.create(name: "Adventure")
+l1 = List.create(name: "Action", photo: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EK7upmf5Nv9BHhPR92_OqQHaEJ%26pid%3DApi&f=1')
+l2 = List.create(name: "Adventure", photo: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EK7upmf5Nv9BHhPR92_OqQHaEJ%26pid%3DApi&f=1')
 puts 'Create new lists'
 
 Bookmark.destroy_all
