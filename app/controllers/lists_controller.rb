@@ -16,9 +16,9 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to new_list_bookmark_path(@list)
+      redirect_to list_path(@list)
     else
-      render 'new'
+      render :new
     end
   end
 
