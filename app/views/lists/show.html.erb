@@ -4,9 +4,6 @@
     <div class="text-center">
       <h3>Movies in list</h3>
       <h1> <%= @list.name %> </h1>
-      <div>
-        <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-      </div>
     </div>
 
     <div class="text-center">
@@ -24,6 +21,8 @@
       <% end %>
     </div>
     <div class="text-center">
+      <%= link_to 'Borrar lista', @list, method: :delete, data: { confirm: "Confirma borrar" } %>
+      <%= link_to 'Agregar película', new_list_bookmark_path(@list) %>
       <%= link_to '<< Volver', root_path %>
     </div>
   </div>
