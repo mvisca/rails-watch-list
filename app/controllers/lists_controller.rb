@@ -23,7 +23,6 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list.bookmarks.delete_all
     @list.destroy
     redirect_to root_path
   end

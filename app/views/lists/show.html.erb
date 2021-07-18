@@ -17,11 +17,13 @@
           <h2> <%= movie.title  %></h2>
           <p> <%= movie.overview  %></p>
           <p> <%= movie.rating  %></p>
+          <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+          <%= link_to "Delete movie", bookmark_path(bookmark), method: :delete, data: { confirm: "Confirma borrar" } %>
         </div>
       <% end %>
     </div>
     <div class="text-center">
-      <%= link_to 'Borrar lista', @list, method: :delete, data: { confirm: "Confirma borrar" } %>
+      <%= link_to 'Borrar lista', list_path(@list), method: :delete, data: { confirm: "Confirma borrar" } %>
       <%= link_to 'Agregar película', new_list_bookmark_path(@list) %>
       <%= link_to '<< Volver', root_path %>
     </div>
